@@ -1,10 +1,6 @@
-README for the hookless email notifier for a BAZAAR repository 
-=========================
-
-
 -DESCRIPTION
 
-	This perl script act as an hookless email notifier for Bazaar repository. This script is easy to install & maintain on server. Do following steps in Bazaar repository server, to install the script.
+	This perl script act as an hookless email notifier for Bazaar repository. This script is easy to install and maintain in a server. Do following steps in Bazaar repository server, to install the script.
 
 
 
@@ -16,10 +12,11 @@ README for the hookless email notifier for a BAZAAR repository
 	mv sendEmailUponCommit.pl /Repository/trunk/
 	mv mailListToSendCommit.txt /Repository/trunk/
 
-3. Open file '/etc/crontab' using sudo, and add following lines, (This is to ensure that every 10min, script is executed and log is printed to file 'sendEmailUponCommit.log')
+3. Open file '/etc/crontab' using sudo, and add the below lines. This is to ensure that every 10min, script is executed and log is printed to file 'sendEmailUponCommit.log'.
+
 01,11,21,31,41,51 *     * * *   root    /Repository/trunk/sendEmailUponCommit.pl >> /Repository/trunk/sendEmailUponCommit.log
 
 
 -REQUIREMENT
-	LINUX/UNIX machine with Perl 5 and mail utility installed.
+	LINUX/UNIX machine with Perl 5 (or above) and mail utility installed.
 
